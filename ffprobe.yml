@@ -1,0 +1,7 @@
+---
+hosts: 192.34.12.247
+
+tasks:
+- name: ffprobe a server de testing
+  shell: ffprobe {{ multiplexor }}
+  

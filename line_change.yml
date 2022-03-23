@@ -1,0 +1,12 @@
+---
+- name: Cambiar la linea UDP
+  hosts: 192.34.12.96
+  
+
+
+- name: Cambiar puerto SSH
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^(.*)Port 22'
+        line: 'Port 23'
+      tags: cambiopuertossh

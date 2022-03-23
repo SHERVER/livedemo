@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  gather_facts: no
+  tasks:
+  - set_fact:
+      hex_val: '0x1400'
+  - set_fact:
+      int_val: "{{ hex_val | int(base=16) }}"
+  - debug:
+      var: int_val

@@ -1,9 +1,9 @@
 ---
-name: Prueba de FFROBE
-hosts: 192.34.12.247
-vars_files: vars.yml
+- name: Prueba de FFROBE
+  hosts: 192.34.12.247
+  vars_files: vars.yml
 
-tasks:
-- name: ffprobe a server de testing
-  shell: ffprobe {{ multiplexor }}
+  tasks:
+  - name: ffprobe a server de testing
+    shell: ffprobe {{ multiplexor }}
   

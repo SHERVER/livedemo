@@ -7,6 +7,6 @@
   - name: Cambiar puerto SSH
     lineinfile:
       path: /opt/dockerapps/manifests/AWX_PRUEBA_.bk
-      regexp: '^(.*)"{{ path0 }}"'
-      line: "{{ path }}"
+      regexp: regexp: '^("{{ path0 }}")\s+{$'
+      line: line: '\1 "{{ path }}" {'
     tags: change

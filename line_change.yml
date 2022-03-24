@@ -7,6 +7,6 @@
   - name: Cambiar puerto SSH
     lineinfile:
       path: /opt/dockerapps/manifests/AWX_PRUEBA_.bk
-      regexp: '^(-i 'udp://224.0.1.96:10002?pkt_size=1316&buffer_size=10000000&fifo_size=10000000&overrun_nonfatal=1&timeout=2000000')\s+{$'
-      line: '\1 -i 'udp://TOOLBOX?pkt_size=1316&buffer_size=10000000&fifo_size=10000000&overrun_nonfatal=1&timeout=2000000' {'
+      regexp: '^(udp://224.0.1.96:10002?pkt_size=1316&buffer_size=10000000&fifo_size=10000000&overrun_nonfatal=1&timeout=2000000)\s+{$'
+      line: '\1 udp://TOOLBOX?pkt_size=1316&buffer_size=10000000&fifo_size=10000000&overrun_nonfatal=1&timeout=2000000 {'
     tags: change

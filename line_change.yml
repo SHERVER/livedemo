@@ -1,12 +1,12 @@
 ---
-- name: Cambiar la linea UDP
+- name: Cambio de linea
   hosts: 192.34.12.96
-  
+  vars_files: vars.yml
 
-
-- name: Cambiar puerto SSH
-      lineinfile:
-        path: /etc/ssh/sshd_config
-        regexp: '^(.*)Port 22'
-        line: 'Port 23'
-      tags: cambiopuertossh
+  tasks:
+  - name: Cambiar puerto SSH
+    lineinfile:
+      path: //opt/dockerapps/manifests/AWX_PRUEBA_.bk
+      regexp: '^(.*)-i 'udp://224.0.1.96:10002?pkt_size=1316&buffer_size=10000000&fifo_size=10000000&overrun_nonfatal=1&timeout=2000000''
+      line: "{{ path }}"
+    tags: change

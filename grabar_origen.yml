@@ -1,8 +1,10 @@
+---
+- name: Grabar señal de Origen
+  hosts: "{{ host }}"
+  vars_files: vars.yml
 
+  tasks:
+  - name: Grabar señal de origen
+    shell: ffmpeg -i "{{ ruta_señal }}":"{{ puerto }}" -map 'i:"{{ id_01 }}"' -map 'i:"{{ id_02 }}"' -c copy -t 30 -f mpegts /tmp/"{{ senal }}".mp4
 
-
-
-
-
-
-ffmpeg -i udp://239.1.1.183:3254 -map 'i:0x7d1' -map 'i:0x7f8' -c copy -t 30 -f mpegts disney.mp4
+#ffmpeg -i udp://239.1.1.183:3254 -map 'i:0x7d1' -map 'i:0x7f8' -c copy -t 30 -f mpegts disney.mp4

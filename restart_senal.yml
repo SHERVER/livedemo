@@ -5,4 +5,4 @@
 
   tasks:
   - name: Restart señal
-    shell: systemctl restart {{ señal }}
+    shell: systemctl restart {{ senal }}
